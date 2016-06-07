@@ -63,12 +63,14 @@
                 <td class="auto-style4"><h5>&nbsp;</h5>
                     <h5>SignIn here now</h5>
                  UserName&nbsp;<asp:TextBox ID="txtUn" runat="server"></asp:TextBox> 
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter UserName" ForeColor="Red" ControlToValidate="txtUn"></asp:RequiredFieldValidator>
-                    </br></br>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter UserName" ForeColor="Red" ControlToValidate="txtUn" ValidationGroup="SignIn"></asp:RequiredFieldValidator>
+                    <br/>
+                    <br/>
                  Password&nbsp;&nbsp; <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter password" ForeColor="Red" ControlToValidate="txtPwd"></asp:RequiredFieldValidator>
-                    </br></br>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="btnSignIn" runat="server" Text="SignIn" OnClick="btnSignIn_Click" Width="173px" BackColor="Aqua"/>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter password" ForeColor="Red" ControlToValidate="txtPwd" ValidationGroup="SignIn"></asp:RequiredFieldValidator>
+                    <br/>
+                    <br/>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="btnSignIn" runat="server" Text="SignIn" OnClick="btnSignIn_Click" Width="173px" BackColor="Aqua" ValidationGroup="SignIn"/>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <br />
                     <br />
@@ -76,11 +78,11 @@
                 </td>
                 <td class="auto-style3"><h5>New Customer/Signup here now</h5>
                  First Name&nbsp; <asp:TextBox ID="txtFName" runat="server"></asp:TextBox><asp:RequiredFieldValidator ErrorMessage="Enter FirstName" Display="Dynamic" ForeColor="Red"
-                ControlToValidate="txtFName" runat="server" /></br></br>
+                ControlToValidate="txtFName" runat="server" ValidationGroup="SignUp" /><br/><br/>
                  Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox><asp:RegularExpressionValidator runat="server" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                ControlToValidate="txtEmail" ForeColor="Red" ErrorMessage="Invalid email address." /><asp:RequiredFieldValidator ErrorMessage="Enter Email address" Display="Dynamic" ForeColor="Red"
-                ControlToValidate="txtEmail" runat="server" /></br></br>
-                                    <asp:Button ID="btnSignUp" runat="server" Text="SignUp" OnClick="btnSignUp_Click" /></td>
+                ControlToValidate="txtEmail" ForeColor="Red" ErrorMessage="Invalid email address." ValidationGroup="SignUp" /><asp:RequiredFieldValidator ErrorMessage="Enter Email address" Display="Dynamic" ForeColor="Red"
+                ControlToValidate="txtEmail" runat="server" ValidationGroup="SignUp" /><br/><br/>
+                                    <asp:Button ID="btnSignUp" runat="server" Text="SignUp" OnClick="btnSignUp_Click" ValidationGroup="SignUp" /></td>
                
                 <td>&nbsp;</td>
                
