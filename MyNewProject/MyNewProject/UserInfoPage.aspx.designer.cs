@@ -58,60 +58,6 @@ namespace MyNewProject {
         protected global::System.Web.UI.WebControls.TextBox txtemail;
         
         /// <summary>
-        /// dropdownmonth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropdownmonth;
-        
-        /// <summary>
-        /// dropdownday control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropdownday;
-        
-        /// <summary>
-        /// dropdownyear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropdownyear;
-        
-        /// <summary>
-        /// radiomale control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radiomale;
-        
-        /// <summary>
-        /// radiofemale control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radiofemale;
-        
-        /// <summary>
-        /// txtgender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList txtgender;
-        
-        /// <summary>
         /// txtaddr1 control.
         /// </summary>
         /// <remarks>
