@@ -54,10 +54,9 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="btnedit" runat="server" Text="Edit" OnClick="btnedit_Click" />
+                    <asp:Button ID="btnedit" runat="server" Text="Edit&Save" OnClick="btnedit_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                    <asp:Button ID="btnsave" runat="server" Text="Save" />
-                </td>
+                    </td>
             </tr>
         </table>
     
