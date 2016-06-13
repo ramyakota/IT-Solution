@@ -42,7 +42,7 @@ namespace MyNewProject
 				string password = txtpassword.Text;
 				string cs = @"server=Sweetu\SQLEXPRESS;database=mynewproject;Trusted_Connection=True;";
 				SqlConnection conn = new SqlConnection(cs);
-				SqlCommand cmd = new SqlCommand("insert into userinfo values(@userid,@firstname,@lastname,@email,@birthday,@gender,@addr1,@addr2,@street,@city,@state,@zipcode,@mobilenumber,@password)", conn);
+				SqlCommand cmd = new SqlCommand("insert into usersinfo values(@userid,@firstname,@lastname,@email,@birthday,@gender,@addr1,@addr2,@street,@city,@state,@zipcode,@mobilenumber,@password)", conn);
 				cmd.Parameters.AddWithValue("@userid", userid);
 				cmd.Parameters.AddWithValue("@firstname", firstname);
 				cmd.Parameters.AddWithValue("@lastname", lastname);
