@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 
 namespace MyNewProject
@@ -21,9 +22,10 @@ namespace MyNewProject
 		{
 			string userid = txtUn.Text;
 			string password = txtPwd.Text;
-			string cs = @"server=Sweetu\SQLEXPRESS;database=mynewproject;Trusted_Connection=True;";
+			 string cs = ConfigurationManager.ConnectionStrings["users"].ConnectionString;
+			//string cs = @"server=Sweetu\SQLEXPRESS;database=mynewproject;Trusted_Connection=True;";
 			SqlConnection conn = new SqlConnection(cs);
-			SqlCommand cmd = new SqlCommand("Select count(*) from userinfo where userid=@userid and password=@password",conn);
+			SqlCommand cmd = new SqlCommand("Select count(*) from usersinfo where userid=@userid and password=@password",conn);
 			cmd.Parameters.AddWithValue("@userid", userid);
 			cmd.Parameters.AddWithValue("@password", password);
 			conn.Open();
@@ -49,6 +51,8 @@ namespace MyNewProject
 
 		protected void btnSignUp_Click(object sender, EventArgs e)
 		{
+			Session["First Name"] = txtFName.Text;
+			Session["Email"] = txtEmail.Text;
 			Response.Redirect("SignUpPage.aspx");
 		}
 

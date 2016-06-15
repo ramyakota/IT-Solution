@@ -1,0 +1,51 @@
+create database mynewproject
+
+DROP table usersinfo
+
+CREATE TABLE usersinfo
+(
+ userid         INTEGER NOT NULL PRIMARY KEY,
+ firstname      VARCHAR(100),
+ lastname       VARCHAR(50),
+ email          VARCHAR(100),
+ birthday       DATE,
+ gender         VARCHAR(10),
+ addr1          VARCHAR(100),
+ addr2          VARCHAR(100),
+ street         VARCHAR(100),
+ city           VARCHAR(100),
+ state          VARCHAR(100),
+ zipcode        VARCHAR(100),
+ mobilenumber   VARCHAR(100),
+ password       VARCHAR(100),
+)
+
+
+SELECT * FROM usersinfo
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE pro_usersinfo
+	  @userid integer,
+      @firstName varchar(50),
+      @LastName varchar(50),
+	  @email varchar(50),
+	  @addr1 varchar(50),
+	  @addr2 varchar(50),
+	  @street varchar(50),
+      @City varchar(50),
+      @state varchar(50),
+	  @zipcode varchar(50),
+	  @mobilenumber varchar(50)
+AS
+BEGIN
+      SET NOCOUNT ON;
+      update usersinfo set firstname=@firstname, lastname=@lastname, email=@email, 
+	  addr1=@addr1,addr2=@addr2, street=@street, city=@city, state=@state, 
+	  zipcode=@zipcode, mobilenumber=@mobilenumber where userid=@userid
+END
+
+
+
