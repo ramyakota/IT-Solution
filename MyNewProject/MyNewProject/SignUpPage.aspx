@@ -59,8 +59,8 @@
             validationexpression="[^\s]{8,12}"/>
                     <br />
                     Re-Enter Password<asp:TextBox ID="txtrepassword" runat="server" TextMode="Password"></asp:TextBox><asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Re-Enter correct password" ForeColor="Red" ControlToValidate="txtrepassword" ControlToCompare="txtpassword"></asp:CompareValidator>
-                    </br>
-                   Email <asp:TextBox ID="txtemail" runat="server" ToolTip="Enter your First Name"></asp:TextBox></br><asp:RegularExpressionValidator runat="server" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                    <br/>
+                   Email <asp:TextBox ID="txtemail" runat="server" ToolTip="Enter your First Name"></asp:TextBox></br/><asp:RegularExpressionValidator runat="server" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
                 ControlToValidate="txtemail" ForeColor="Red" ErrorMessage="Invalid email address." /></br>
                     Re-Enter Email <asp:TextBox ID="txtreemail" runat="server"></asp:TextBox>
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ForeColor="Red" ErrorMessage="Re-Enter correct email" ControlToValidate="txtreemail" ControlToCompare="txtemail"></asp:CompareValidator>

@@ -42,7 +42,9 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style5"></td>
-                <td class="auto-style6"></td>
+                <td class="auto-style6">
+                    <asp:Label ID="lblmsg" runat="server"></asp:Label>
+                </td>
                 <td class="auto-style7"></td>
                
                 <td class="auto-style8"></td>

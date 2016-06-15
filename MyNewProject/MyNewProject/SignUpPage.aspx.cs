@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace MyNewProject
 {
@@ -13,7 +14,8 @@ namespace MyNewProject
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
+			txtfirstname.Text = Session["First Name"].ToString();
+			txtemail.Text = Session["Email"].ToString();
 		}
 
 		protected void Button1_Click(object sender, EventArgs e)
@@ -40,7 +42,8 @@ namespace MyNewProject
 				string zip = txtzip.Text;
 				string mobile = txtmobile.Text;
 				string password = txtpassword.Text;
-				string cs = @"server=Sweetu\SQLEXPRESS;database=mynewproject;Trusted_Connection=True;";
+			 string cs = ConfigurationManager.ConnectionStrings["users"].ConnectionString;
+				//string cs = @"server=Sweetu\SQLEXPRESS;database=mynewproject;Trusted_Connection=True;";
 				SqlConnection conn = new SqlConnection(cs);
 				SqlCommand cmd = new SqlCommand("insert into usersinfo values(@userid,@firstname,@lastname,@email,@birthday,@gender,@addr1,@addr2,@street,@city,@state,@zipcode,@mobilenumber,@password)", conn);
 				cmd.Parameters.AddWithValue("@userid", userid);
@@ -77,7 +80,8 @@ namespace MyNewProject
 				dropdownday.Text = "";
 				dropdownyear.Text = "";
 				txtfirstname.Focus();
-
+				Response.Redirect("MainPage.aspx");
+				
 			}
 
 			catch (ArgumentOutOfRangeException ae)
